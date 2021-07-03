@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {Set} from "../Set.sol";
+import {Set, SetMethods} from "../Set.sol";
 
 /// @dev Wrapper for testing.
 contract SetWrapper {
-    using Set for Set.Data;
+    using SetMethods for Set;
 
-    Set.Data private set;
+    Set private set;
 
     function values() public view returns (address[] memory) {
         return set.values;

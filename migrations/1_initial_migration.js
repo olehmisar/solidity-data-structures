@@ -1,10 +1,10 @@
 const Migrations = artifacts.require("Migrations")
-const Set = artifacts.require("Set")
+const SetMethods = artifacts.require("SetMethods")
 const SetWrapper = artifacts.require("SetWrapper")
 
 module.exports = function (deployer) {
   deployer.deploy(Migrations)
-  deployer.deploy(Set)
-  deployer.link(Set, SetWrapper)
+  deployer.deploy(SetMethods)
+  deployer.link(SetMethods, SetWrapper)
   deployer.deploy(SetWrapper)
 }
